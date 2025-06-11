@@ -1,0 +1,28 @@
+
+.header .square{
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    background-color: rgb(0 80 255);
+    margin-right: 10px;
+}
+.header-left .name-author a{
+    font-size: 25px;
+    color: rgb(0,0,0);
+    text-decoration: none;
+    font-weight: bold;
+}
+.header .slash{
+    font-weight: 300;
+    padding: 0 10px;
+}
+.header-left .position a{
+    font-size: 17px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgb(0,0,0);
+    font-weight: 300;
+}
+.header .header-container{
+    display: flex;
+}
