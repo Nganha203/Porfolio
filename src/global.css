@@ -9,3 +9,16 @@ body{
 a{
     text-decoration: none;
 }
+.wrap-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.main-page{
+    padding-top: 148px;
+    flex: 1;
+}
+.page{
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
