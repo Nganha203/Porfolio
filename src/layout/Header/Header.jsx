@@ -32,16 +32,16 @@ const Header = (props) => {
                     <div className="header-right">
                         <div className='menu-right'>
                             <span onClick={() => handleChangePage(1)}>
-                                <a className={page === 1 ? 'active' : ''} href="#">About me</a>
+                                <a className={page === 1 ? 'active' : ''} href="#">ABOUT ME</a>
                             </span>
                             <span onClick={() => handleChangePage(2)}>
-                                <a className={page === 2 ? 'active' : ''} href="#">Resume</a>
+                                <a className={page === 2 ? 'active' : ''} href="#">RESUME</a>
                             </span>
                             <span onClick={() => handleChangePage(3)}>
-                                <a className={page === 3 ? 'active' : ''} href="#">Project</a>
+                                <a className={page === 3 ? 'active' : ''} href="#">PROJECT</a>
                             </span>
                             <span onClick={() => handleChangePage(4)}>
-                                <a className={page === 4 ? 'active' : ''} href="#">Contact</a>
+                                <a className={page === 4 ? 'active' : ''} href="#">CONTACT</a>
                             </span>
                         </div>
 
