@@ -19,6 +19,13 @@ a{
     flex: 1;
 }
 .page{
-    background-color: antiquewhite;
+    /* rgb(230 218 206) */
+    background-color: antiquewhite; 
     min-height: 100vh;
 }
+
+/* @media (max-width: 500px){
+    .main-page{
+        padding-top: 100px;
+    }
+} */

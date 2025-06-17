@@ -1,0 +1,133 @@
+.resume-page .title-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 125px 0;
+}
+.resume-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 238px 10px 238px;  
+}
+.title-page h1{
+    margin-left: 8px;
+}
+.cover-experience{
+    margin-bottom: 70px;
+}
+.experience .group-experience{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 62px;
+}
+.group-experience p{
+    font-size: 25px;
+    font-weight: bold;
+}
+.group-experience button{
+    padding: 10px 20px;
+    background-color: rgb(0, 80, 255);
+    color: white;
+    border: 2px solid rgb(0, 80, 255);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all ease .5s;
+}
+.group-experience button:hover{
+    cursor: pointer;
+    background-color: rgb(230 218 206);
+    color: black;
+}
+.description .description-group{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    padding: 85px 50px;
+    margin-bottom: 30px;    
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.2);
+}
+.description-group .time-company{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.description-group .time-company p:nth-child(1){
+    color: rgb(0, 80, 255);
+    font-size: 20px;
+}
+.description-group .time-company p:nth-child(2){
+    font-size: 17px;
+    font-weight: 300;
+}
+.description-group .time-company p:nth-child(3){
+    font-weight: 300;    
+    font-size: 13px;
+}
+.description-group .time-company p:nth-child(4){
+    font-weight: 300;    
+    font-size: 13px;
+    margin-top: 10px;
+}
+.description-group .content{
+    font-weight: 300;
+    flex: 6;
+    flex-direction: column;
+    gap: 16px;
+}
+.description-group .content p{
+    margin-top: 25px;
+}
+.cover-education{
+    margin-bottom: 100px;
+}
+.skills{
+    background-color: white;
+    padding: 70px 40px;
+    margin: 20px 0 80px 0;         
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.2);
+}
+.skills .title{
+    font-size: 25px;
+    color: black;
+    margin-bottom: 20px;
+}
+.skills-content .text-skill{
+    font-weight: 300;
+    font-size: 13px;
+}
+.skills-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 60px;
+    row-gap: 25px;
+}
+.skills-content div span:nth-child(1){
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
+.skills > div:nth-child(1){
+    margin-bottom: 80px;
+}
+@media(max-width: 500px){
+    .resume-page .title-page{
+        padding: 70px 0;
+    }
+    .resume-container{
+        padding: 0 5px 10px 20px;  
+    }
+    .description .description-group{
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .skills-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 60px;
+        row-gap: 25px;
+    }
+}
+
