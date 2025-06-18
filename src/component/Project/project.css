@@ -1,0 +1,90 @@
+.project-page .title-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 125px;
+    padding-bottom: 50px;
+}
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 225px 10px 225px;  
+}
+.project-page .content-text p{
+    font-weight: 300;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+.cover-projects .description-project{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    margin-bottom: 80px;    
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+.cover-projects .description-project::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 10px;
+    height: 45px;
+    background-color: rgb(0, 80, 255); /* hoặc màu xanh bạn muốn */
+}
+.description-project .name-project{
+    flex: 6;
+    padding: 40px 10px 0 40px;
+}
+.description-project .image{
+    flex: 4;
+}
+.image img{
+    display: block;
+    width: 322px;
+    height: 404px;
+}
+.name-project div p:nth-child(1){
+    color: rgb(0, 80, 255);
+    font-size: 22px;
+}
+.name-project div p:nth-child(2){
+    font-weight: 500;
+    font-size: 14px;
+}
+.name-project > p{
+    font-weight: 300;
+    font-size: 15px;
+    padding-top: 40px;
+}
+@media (max-width: 500px){
+    .project-container{
+        padding: 0 5px 10px 15px;   ;
+    }
+    .cover-projects .description-project{
+        flex-direction: column;
+    }
+    .image img{
+        width: 100%;
+        height: 200px;
+    }
+    .name-project > p{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .description-project .name-project{
+        padding-top: 20px;
+    }
+    .name-project div p:nth-child(1){
+        font-size: 16px;
+    }
+    .project-page .title-page{
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+    .project-page .content-text p{
+        padding-left: 5px;
+    }
+
+}
