@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './header.css'
+import MenuItem from './MenuItems'
 
 const Header = (props) => {
     const { page, setPage } = props
     const [isShow, setIsShow] = useState(false)
+    const items_menu = ['ABOUT ME', 'RESUME', 'PROJECT', 'CONTACT']
 
     const handleShowMenu = () => {
         setIsShow(!isShow)
@@ -31,18 +33,16 @@ const Header = (props) => {
                     </div>
                     <div className="header-right">
                         <div className='menu-right'>
-                            <span onClick={() => handleChangePage(1)}>
-                                <a className={page === 1 ? 'active' : ''} href="#">ABOUT ME</a>
-                            </span>
-                            <span onClick={() => handleChangePage(2)}>
-                                <a className={page === 2 ? 'active' : ''} href="#">RESUME</a>
-                            </span>
-                            <span onClick={() => handleChangePage(3)}>
-                                <a className={page === 3 ? 'active' : ''} href="#">PROJECT</a>
-                            </span>
-                            <span onClick={() => handleChangePage(4)}>
-                                <a className={page === 4 ? 'active' : ''} href="#">CONTACT</a>
-                            </span>
+                            {
+                                items_menu.map((item, index) => (
+                                    <MenuItem
+                                        page={page}
+                                        handleChangePage={handleChangePage}
+                                        item={item}
+                                        index={index}
+                                    />
+                                ))
+                            }
                         </div>
 
                         <span onClick={handleShowMenu} className='icon-menu'>
@@ -55,18 +55,16 @@ const Header = (props) => {
                                 <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
                             </span>
                             <div className='menu-sidebar'>
-                                <span onClick={() => handleChangePage(1)}>
-                                    <a className={page === 1 ? 'active' : ''} href="#">About me</a>
-                                </span>
-                                <span onClick={() => handleChangePage(2)}>
-                                    <a className={page === 2 ? 'active' : ''} href="#">Resume</a>
-                                </span>
-                                <span onClick={() => handleChangePage(3)}>
-                                    <a className={page === 3 ? 'active' : ''} href="#">Project</a>
-                                </span>
-                                <span onClick={() => handleChangePage(4)}>
-                                    <a className={page === 4 ? 'active' : ''} href="#">Contact</a>
-                                </span>
+                                {
+                                    items_menu.map((item, index) => (
+                                        <MenuItem
+                                            page={page}
+                                            handleChangePage={handleChangePage}
+                                            item={item}
+                                            index={index}
+                                        />
+                                    ))
+                                }
                             </div>
                         </div>
                     }
