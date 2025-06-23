@@ -33,7 +33,7 @@
     font-weight: 300;
 }
 .header .header-container{
-    padding: 55px 50px 55px 50px;
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;

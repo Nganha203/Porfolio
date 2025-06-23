@@ -6,23 +6,41 @@ import Project from "./component/Project/Project";
 import Contact from "./component/Contact/Contact";
 import { useState } from "react";
 import Footer from "./layout/Footer/Footer";
+import { AnimatePresence, motion } from "framer-motion"
 
 function App() {
     const [page, setPage] = useState(1);
-    
+
+    const renderPage = () => {
+        switch (page) {
+            case 1: return <AboutMe />
+            case 2: return <Resume />
+            case 3: return <Project />
+            case 4: return <Contact />
+            default: return null
+        }
+    }
+
     return (
         <div className="wrap-page">
             <header>
-                <Header page={page} setPage={setPage}/>
+                <Header page={page} setPage={setPage} />
             </header>
             <main className="main-page">
-                {page === 1 && <AboutMe />}
-                {page === 2 && <Resume />}
-                {page === 3 && <Project />}
-                {page === 4 && <Contact />}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={page}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        {renderPage()}
+                    </motion.div>
+                </AnimatePresence>
             </main>
             <footer>
-                <Footer/>
+                <Footer />
             </footer>
         </div>
     )

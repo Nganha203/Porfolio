@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './header.css'
 import MenuItem from './MenuItems'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = (props) => {
     const { page, setPage } = props
@@ -36,6 +37,7 @@ const Header = (props) => {
                             {
                                 items_menu.map((item, index) => (
                                     <MenuItem
+                                        key={index}
                                         page={page}
                                         handleChangePage={handleChangePage}
                                         item={item}
@@ -46,27 +48,40 @@ const Header = (props) => {
                         </div>
 
                         <span onClick={handleShowMenu} className='icon-menu'>
-                            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Menu_Alt_05"> <path id="Vector" d="M5 17H13M5 12H19M11 7H19" stroke="rgb(0, 80, 255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                            <svg width="40px" height="40px" fill="none" viewBox="0 0 24 24" id="menu" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" className="icon flat-line"> <path id="primary" d="M3,12H21M9,18H21M3,6H15" style={{ fill: 'none', stroke: 'rgb(0, 80, 255)', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2, }} /></svg>
                         </span>
                     </div>
+
                     {
-                        isShow && <div className="sidebar">
-                            <span onClick={handleShowMenu} className='icon-close'>
-                                <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
-                            </span>
-                            <div className='menu-sidebar'>
-                                {
-                                    items_menu.map((item, index) => (
-                                        <MenuItem
-                                            page={page}
-                                            handleChangePage={handleChangePage}
-                                            item={item}
-                                            index={index}
-                                        />
-                                    ))
-                                }
-                            </div>
-                        </div>
+                        isShow && (
+                            <AnimatePresence mode='wait'>
+                                <motion.div
+                                    className='sidebar'
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: .2 }}
+                                >
+                                    <span onClick={handleShowMenu} className='icon-close'>
+                                        <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Close_MD"> <path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+                                    </span>
+                                    <div className='menu-sidebar'>
+                                        {
+                                            items_menu.map((item, index) => (
+                                                <MenuItem
+                                                    key={index}
+                                                    page={page}
+                                                    handleChangePage={handleChangePage}
+                                                    item={item}
+                                                    index={index}
+                                                />
+                                            ))
+                                        }
+                                    </div>
+
+                                </motion.div>
+                            </AnimatePresence>
+                        )
                     }
 
                 </div>
