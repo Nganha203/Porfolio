@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="container">
             <div className="footer-container">
                 <div className="footer-left">
-                    <p>© 2035 by Maya Nelson.</p>
+                    <p>© 2035 by Nguyen Ngoc Ngan Ha.</p>
                     <p>Powered and secured by <span>Wix</span></p>
                 </div>
                 <div className="footer-right">

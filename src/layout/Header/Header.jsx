@@ -23,13 +23,13 @@ const Header = (props) => {
                     <div className="header-left">
                         <span className='square'></span>
                         <span className="name-author">
-                            <a href="#">Maya Nelson</a>
+                            <a href="#">Nguyen Ngoc Ngan Ha</a>
                         </span>
                         <span className='slash'>
                             <svg fill="#000000" width="20px" height="15px" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>slash</title> <path d="M3.625 27.094l9.563-26.688h2.406l-9.563 26.688h-2.406z"></path> </g></svg>
                         </span>
                         <span className="position">
-                            <a href="#">PROJECT MANAGER</a>
+                            <a href="#">FRONT-END DEVELOPER</a>
                         </span>
                     </div>
                     <div className="header-right">

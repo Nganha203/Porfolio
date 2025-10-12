@@ -1,5 +1,5 @@
 import './infor.css'
-
+import hinhThe from '/image/Hinh_the_trang.JPG'
 
 const AboutMe = () => {
     return <div className="infor-page page">
@@ -7,7 +7,7 @@ const AboutMe = () => {
             <div className="infor-container">
                 <div className='infor-content'>
                     <div className='content-left'>
-                        <img src="/image/infor.png" alt="" />
+                        <img src={hinhThe} alt="hinh-the" />
                     </div>
                     <div className='content-right'>
                         <div>
@@ -15,7 +15,7 @@ const AboutMe = () => {
                         </div>
                         <div>
                             <p>A Bit About Me</p>
-                            <p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                            <p>I'm Nguyen Ngoc Ngan Ha. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
                         </div>
                         <div className='group-icon'>
                             <div>

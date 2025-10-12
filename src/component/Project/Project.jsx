@@ -1,11 +1,12 @@
 import './project.css'
+import ironMan from '/image/iron-man.jpg'
+import captain from '/image/captain.webp'
+import thor from '/image/thor.webp'
 
 const Project = () => {
     const projects =
         [
-            '/image/iron-man.jpg',
-            '/image/captain.webp',
-            '/image/thor.webp'
+            ironMan, captain, thor
         ]
 
     return <div className="project-page page">

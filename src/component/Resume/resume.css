@@ -40,6 +40,11 @@
     background-color: rgb(230 218 206);
     color: black;
 }
+.group-experience button a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
 .description .description-group{
     width: 100%;
     background-color: white;

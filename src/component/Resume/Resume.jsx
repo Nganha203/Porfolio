@@ -1,4 +1,5 @@
 import './resume.css'
+import file_CV from '/file/Intern_Web_Developer_NguyenNgocNganHa.pdf'
 
 const Resume = () => {
 
@@ -16,7 +17,11 @@ const Resume = () => {
                     <div className='experience'>
                         <div className='group-experience'>
                             <p>Experience</p>
-                            <button>DOWNLOAD CV</button>
+                            <button>
+                                <a href={file_CV} download='CV_NguyenNgocNganHa.pdf'>
+                                    DOWNLOAD CV
+                                </a>
+                            </button>
                         </div>
                     </div>
                     <div className='description'>
